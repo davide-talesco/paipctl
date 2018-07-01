@@ -1,0 +1,33 @@
+{
+  "name": "paipctl",
+  "version": "0.0.1",
+  "description": "A cli for interacting with PAIP services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "paipctl": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davide-talesco/paipctl.git"
+  },
+  "keywords": [
+    "paip",
+    "nats",
+    "microservices",
+    "cli"
+  ],
+  "author": "davide talesco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davide-talesco/paipctl/issues"
+  },
+  "homepage": "https://github.com/davide-talesco/paipctl#readme",
+  "dependencies": {
+    "js-yaml": "^3.12.0",
+    "paip": "0.0.4",
+    "yargs": "^11.1.0"
+  }
+}
