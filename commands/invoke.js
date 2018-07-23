@@ -16,24 +16,29 @@ exports.builder = {
   args: {
     describe: 'A space separated list of arguments',
     type: 'array'
+  },
+  metadata: {
+    describe: 'A metadata object',
+    type: 'object'
   }
 };
 
 exports.handler = function (argv) {
 
-  // load payload file if provided
-  const payload = loadPayload(argv);
+  // load request from file if provided
+  const request = loadPayload(argv);
 
-  // build subject and args parameters giving the command line options priority
-  const subject = argv.subject || payload.subject;
-  const args = argv.args || payload.args;
+  // override subject and args if provided via command line
+  request.subject = argv.subject || request.subject;
+  request.args = argv.args || request.args;
+  request.metadata = argv.metadata || request.metadata;
 
   // load paip and invoke the method
   const Paip = require('paip');
 
   const client = Paip({name:'paipctl', logLevel:'off'});
 
-  client.invoke({subject, args})
+  client.invoke(request)
     .then(console.log)
     .catch(console.error)
     .then(() => client.close());
