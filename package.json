@@ -1,6 +1,6 @@
 {
   "name": "paipctl",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A cli for interacting with PAIP services",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/davide-talesco/paipctl#readme",
   "dependencies": {
     "js-yaml": "^3.12.0",
-    "paip": "0.0.10",
+    "paip": "0.0.13",
     "yargs": "^11.1.0"
   }
 }
