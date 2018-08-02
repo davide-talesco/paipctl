@@ -37,7 +37,7 @@ Below the accepted command line options:
 Parameter Name | Type | Required |  Default | Description
 -------- | -------- | ----------- | -------- | ------- |
 `--nats` | String | **false** | {} | this is the node-nats client connect option object https://github.com/nats-io/node-nats
-`--timeout` | number | **false** | 5000 | this is the milliseconds paip wait before declaring a request timed out
+`--timeout` | number | **false** | 25000 | this is the milliseconds paip wait before declaring a request timed out
 
 #### Environment Variables
 
