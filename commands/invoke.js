@@ -34,14 +34,17 @@ exports.handler = function (argv) {
   request.metadata = argv.metadata || request.metadata;
 
   // load paip and invoke the method
-  const Paip = require('paip');
+  const Paip = require('paip').Paip;
+  const U = require('paip').utils;
 
-  const client = Paip({name:'paipctl', logLevel:'off'});
+  const client = Paip({name:'paipctl', log:'off'});
 
-  client.invoke(request)
+  client.ready()
+    .then(() => client.sendRequest(request))
+    .then(U.getPayload)
     .then(console.log)
     .catch(console.error)
-    .then(() => client.close());
+    .then(U.shutdown(client));
 };
 
 const loadPayload = argv => {

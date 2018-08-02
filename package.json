@@ -27,7 +27,7 @@
   "homepage": "https://github.com/davide-talesco/paipctl#readme",
   "dependencies": {
     "js-yaml": "^3.12.0",
-    "paip": "0.0.13",
+    "paip": "^1.0.0",
     "yargs": "^11.1.0"
   }
 }
