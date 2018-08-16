@@ -10,6 +10,8 @@ You can install it as a global npm package by running: `npm i -g paipctl`
 
 # USAGE
 
+## INVOKE 
+
 You can invoke a remote method by pushing a local yaml file:
 
 `paipctl invoke -f test.yaml`
@@ -29,7 +31,13 @@ You can also pass required parameters directly via command line:
  
 
 TODO: implement global options to override default nats settings
-  
+
+## OBSERVE
+
+You can observe a paip notice message:
+
+`paipctl observe --subejct login`
+
 ## OPTIONS 
 
 Below the accepted command line options:
