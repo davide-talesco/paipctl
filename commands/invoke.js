@@ -1,5 +1,6 @@
 const yaml = require('js-yaml');
 const fs   = require('fs');
+const util = require('util');
 
 exports.command = 'invoke';
 
@@ -42,7 +43,7 @@ exports.handler = function (argv) {
   client.ready()
     .then(() => client.sendRequest(request))
     .then(U.getPayload)
-    .then(console.log)
+    .then(payload => console.log(util.inspect(payload, { depth: null})))
     .catch(console.error)
     .then(U.shutdown(client));
 };

@@ -1,6 +1,6 @@
 {
   "name": "paipctl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A cli for interacting with PAIP services",
   "main": "index.js",
   "scripts": {
